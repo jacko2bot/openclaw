@@ -403,7 +403,7 @@ describe("dispatchCronDelivery — double-announce guard", () => {
     vi.mocked(isLikelyInterimCronMessage).mockReturnValue(false);
 
     const params = makeBaseParams({ synthesizedText: SILENT_REPLY_TOKEN });
-    params.job.deleteAfterRun = true;
+    (params.job as { deleteAfterRun: boolean }).deleteAfterRun = true;
 
     const state = await dispatchCronDelivery(params);
 
