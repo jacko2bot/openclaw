@@ -16,6 +16,12 @@ export {
   spyRuntimeLogs,
 } from "../cli/test-runtime-capture.js";
 export type { CliMockOutputRuntime, CliRuntimeCapture } from "../cli/test-runtime-capture.js";
+export { withEnv, withEnvAsync } from "../test-utils/env.js";
+export { withFetchPreconnect } from "../test-utils/fetch-mock.js";
+export type { FetchMock } from "../test-utils/fetch-mock.js";
+export { createTempHomeEnv } from "../test-utils/temp-home.js";
+export type { TempHomeEnv } from "../test-utils/temp-home.js";
+export { expectGeneratedTokenPersistedToGatewayAuth } from "../test-utils/auth-token-assertions.js";
 export { setDefaultChannelPluginRegistryForTests } from "../commands/channel-test-registry.js";
 export type { ChannelAccountSnapshot, ChannelGatewayContext } from "../channels/plugins/types.js";
 export type { OpenClawConfig } from "../config/config.js";
